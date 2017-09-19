@@ -1,0 +1,51 @@
+{
+	"home":{
+		"title": "Bem vindo",
+
+		"route":{
+			"header":"default-header",
+			"content": "default-content",
+			"script": "default-script"
+		},
+
+		"meta":{
+			"rating": "general",
+			"distribution": "global",
+			"language": "pt-BR",
+			"robots": "index, follow",
+			
+			"description":"Home",
+			"keywords": "home, home, home"
+		},
+
+		"navbar": {
+			"menu":{
+				"order":"1",
+				"text":"Home",
+				"path":"home/"
+			}
+		}
+	},
+
+	"404":{
+		"title": "Not found",
+
+		"route":{
+			"header":"default-header",
+			"content": "default-404",
+			"script": "default-script"
+		},
+
+		"meta":{
+			"rating": "general",
+			"distribution": "global",
+			"language": "pt-BR",
+			"robots": "index, follow",
+			
+			"description":"Not found",
+			"keywords": "404"
+		},
+
+		"navbar": false
+	}
+}
