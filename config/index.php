@@ -10,4 +10,7 @@ require_once 'routes/index.php';
 
 // REQUIRE FUNCTIONS FOR DEVELOPER MODE
 require_once 'devmode/index.php';
+
+// INCLUDES FOR TESTS
+require_once 'tests/index.php';
 ?>
