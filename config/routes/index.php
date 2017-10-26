@@ -8,6 +8,7 @@ $settings->set('page-private', false);
 // Define pagina global caso nao seja setato
 $settings->set('page-name', 'home');
 $settings->set('page', $settings->get('page-list')[$settings->get('page-name')]);
+$settings->set('page-model', 'default');
 
 // REQUIRE CURRENT PAGE
 if (array_key_exists('page', $_GET)) {
@@ -36,7 +37,13 @@ switch ($settings->get('page-name')) {
 }
 
 // Type render page
-if (!$settings->get('page-private')) {
-	require 'models/page-index.php';
+$settings->set('page-model', isset($settings->get('page')['route']['model'])?$settings->get('page')['route']['model']:$settings->get('page-model'));
+switch ($settings->get('page-model')) {
+	case 'default':
+		require_once 'models/page-index.php';
+		break;
+	case 'default-no-script':
+		require_once 'models/page-index-no-script.php';
+		break;
 }
 ?>
